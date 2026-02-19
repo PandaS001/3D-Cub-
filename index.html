@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крестики-нолики 3D Куб - 2 Игрока</title>
+    
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230a0a2a' stroke='%2300ffff' stroke-width='2'/%3E%3Ctext x='16' y='24' font-size='20' text-anchor='middle' fill='%2300ffff' font-family='Arial'%3E🎮%3C/text%3E%3C/svg%3E">
+    
+    <!-- Стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Анимированные созвездия -->
+    <div class="constellations"></div>
+    
+    <!-- Заставка -->
+    <div class="splash-screen">
+        <div class="game-icon">🎲</div>
+        <div class="splash-text">3D Крестики-нолики</div>
+        <div class="splash-subtext">Игра для двух игроков на вращающемся кубе</div>
+    </div>
+    
+    <!-- Основной контент -->
+    <div class="main-page">
+        <h1><span class="handwriting">3D Крестики-нолики</span> <span class="game-title-icon">🎮</span></h1>
+        
+        <!-- Статистика -->
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-label">Счет X:</span>
+                <span class="stat-value" id="playerX-score">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Счет O:</span>
+                <span class="stat-value" id="playerO-score">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label" id="current-turn">❌ Ход игрока X</span>
+            </div>
+        </div>
+        
+        <!-- Контейнер для куба -->
+        <div class="cube-container">
+            <div class="cube" id="game-cube">
+                <div class="cube-face" id="face1"></div>
+                <div class="cube-face" id="face2"></div>
+                <div class="cube-face" id="face3"></div>
+                <div class="cube-face" id="face4"></div>
+                <div class="cube-face" id="face5"></div>
+                <div class="cube-face" id="face6"></div>
+            </div>
+        </div>
+        
+        <!-- Управление -->
+        <div class="game-controls">
+            <button class="neon-btn" id="restartButton">
+                <span class="btn-icon">🔄</span>
+                <span class="btn-text">Новая игра</span>
+            </button>
+            
+            <button class="neon-btn" id="resetScoreButton">
+                <span class="btn-icon">📊</span>
+                <span class="btn-text">Сброс счета</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Аудио -->
+    <audio id="bgMusic" loop>
+        <source src="assets/audio/your_song.mp3" type="audio/mpeg">
+    </audio>
+    <div class="music-control">🔊</div>
+
+    <!-- Скрипты -->
+    <script src="script.js"></script>
+</body>
+</html>
